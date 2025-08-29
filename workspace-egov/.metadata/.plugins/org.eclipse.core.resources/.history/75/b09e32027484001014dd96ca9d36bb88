@@ -1,0 +1,15 @@
+package com.yedam;
+
+public class CarTest {
+	@Test
+	
+	{
+		Car car1 = Car.getInstance("베뉴"); //객체 선언	
+		Car car2 = Car.getInstance("Qm6"); //객체 선언	
+		
+		car1.drive();		
+		car2.drive();
+		
+		System.out.println(car1 == car2);
+	}
+}

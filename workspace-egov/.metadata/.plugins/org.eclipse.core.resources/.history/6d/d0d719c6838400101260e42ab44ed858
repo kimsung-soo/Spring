@@ -1,0 +1,17 @@
+package com.yedam.collect;
+
+public class EmpVO {
+	//필드 선언
+	
+	//empno, ename 생성자
+	
+	public String empno;
+	public String empname;
+	public String dept;
+	public EmpVO(String empno, String empname) {
+		super();
+		this.empno = empno;
+		this.empname = empname;
+	}
+	
+}

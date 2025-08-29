@@ -1,0 +1,60 @@
+package com.yedam.collect;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+/*
+ * List
+순서(인덱스)가 있는 자료구조
+중복 데이터 허용
+*Set
+순서(인덱스) 없음
+중복 허용하지 않음
+*Map
+Key-Value 쌍으로 저장
+Key는 중복 불가, Value는 중복 가능
+ */
+public class ListTest {
+	@DisplayName("Map")
+	@Test
+	public void test3() {
+		//검색
+		Map<String, String> map =new HashMap<>();
+		map.put("100","홍길동");
+		map.put("101","김유신");
+		
+		map.get("100"); //검색속도  map:1 list:n
+	}
+	
+	
+	@DisplayName("List")
+	@Test
+	public void test1() {
+		List<String> list = new ArrayList<>();
+		list.add("사과");
+		list.add("바나나");
+		list.add("사과"); // 중복 허용
+		assertEquals(list.size(), 3);
+		
+		Set<String> set = new HashSet<>(list);
+		assertEquals(set.size(), 2);		
+	}
+	@DisplayName("Set")
+	@Test
+	public void test2() {
+		Set<String> list = new HashSet<>();
+		list.add("사과");
+		list.add("바나나");
+		list.add("사과");  // 중복 무시
+		assertEquals(list.size(), 2);
+	}
+}
