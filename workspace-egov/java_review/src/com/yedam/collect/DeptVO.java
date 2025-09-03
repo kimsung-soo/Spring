@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Builder
 @Data
-public class DeptVO {	
+public class DeptVO {
 	private int deptno;
 	private String dname;
-	private int location;
+	private int locaiton;
 }

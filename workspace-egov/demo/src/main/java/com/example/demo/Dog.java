@@ -2,13 +2,13 @@ package com.example.demo;
 
 import org.springframework.stereotype.Component;
 
-@Component // 싱글톤 패턴 객체를 생성해서 컨테이너 담기
+// 자식
+@Component
 public class Dog implements Animal {
 
 	@Override
 	public void sound() {
-		System.out.println("멍멍@!");
-
+		System.out.println("멍멍");
 	}
 
 }

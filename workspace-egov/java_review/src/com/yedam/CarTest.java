@@ -9,31 +9,30 @@ public class CarTest {
 	
 	@Test
 	public void test3() {
-		Car car1 = new Car ("베뉴");
+		Car car1 = new Car("쏘렌토");
 		car1.setModel("테슬라"); // write
-		System.out.println(car1.getModel()); //red
+		System.out.println(car1.getModel()); // read
 	}
 	
-	@DisplayName("객체 생성") 
-	@Test	
+	@DisplayName("객체생성")
+	@Test
 	public void test2() {
-		Car car1 = new Car("베뉴"); //객체 선언	
-		Car car2 = new Car("Qm6"); //객체 선언	
-				
-		assertEquals(car1,car2);
-	}
-	
-	@DisplayName("싱글톤") 
-	@Test	
-	public void test() {
-		Car car1 = Car.getInstance("베뉴"); //객체 선언	
-		Car car2 = Car.getInstance("Qm6"); //객체 선언	
+		Car car1 = new Car("쏘렌토");
+		Car car2 = new Car("카니발");
 		
-	
-		assertEquals(car1,car2);
+		assertEquals(car1, car2); // 비교
 	}
 	
-	
+	// 아래 골뱅이테스트가 나중에 테스트 자동화 시킬거래요
+	@DisplayName("싱글톤")
+	@Test
+	public void test() {
+		// 싱글톤
+		Car car1 = Car.getInstance("쏘렌토");
+		Car car2 = Car.getInstance("카니발");
+
+		System.out.println(car1 == car2);
+		assertEquals(car1, car2); // 비교
+	}
+
 }
-
-
